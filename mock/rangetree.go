@@ -13,49 +13,34 @@ type RangeTree struct {
 var _ rangetree.RangeTree = new(RangeTree)
 
 func (m *RangeTree) Add(entries ...rangetree.Entry) rangetree.Entries {
-	args := m.Called(entries)
-	ifc := args.Get(0)
-	if ifc == nil {
-		return nil
-	}
-
-	return ifc.(rangetree.Entries)
+	_ = "STUB: not implemented"
+	return *new(rangetree.Entries)
 }
 
-func (m *RangeTree) Len() uint64 {
-	return m.Called().Get(0).(uint64)
-}
+func (m *RangeTree) Len() uint64 { _ = "STUB: not implemented"; return 0 }
 
 func (m *RangeTree) Delete(entries ...rangetree.Entry) rangetree.Entries {
-	return m.Called(entries).Get(0).(rangetree.Entries)
+	_ = "STUB: not implemented"
+	return *new(rangetree.Entries)
 }
 
 func (m *RangeTree) Query(interval rangetree.Interval) rangetree.Entries {
-	args := m.Called(interval)
-	ifc := args.Get(0)
-	if ifc == nil {
-		return nil
-	}
-
-	return ifc.(rangetree.Entries)
+	_ = "STUB: not implemented"
+	return *new(rangetree.Entries)
 }
 
 func (m *RangeTree) InsertAtDimension(dimension uint64, index,
 	number int64) (rangetree.Entries, rangetree.Entries) {
-
-	args := m.Called(dimension, index, number)
-	return args.Get(0).(rangetree.Entries), args.Get(1).(rangetree.Entries)
+	_ = "STUB: not implemented"
+	return *new(rangetree.Entries), *new(rangetree.Entries)
 }
 
 func (m *RangeTree) Apply(interval rangetree.Interval, fn func(rangetree.Entry) bool) {
-	m.Called(interval, fn)
+	_ = "STUB: not implemented"
+	return
 }
 
 func (m *RangeTree) Get(entries ...rangetree.Entry) rangetree.Entries {
-	ifc := m.Called(entries).Get(0)
-	if ifc == nil {
-		return nil
-	}
-
-	return ifc.(rangetree.Entries)
+	_ = "STUB: not implemented"
+	return *new(rangetree.Entries)
 }

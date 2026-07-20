@@ -1,14 +1,3 @@
-/*
-Package datastructures exists solely to aid consumers of the go-datastructures
-library when using dependency managers.  Depman, for instance, will work
-correctly with any datastructure by simply importing this package instead of
-each subpackage individually.
-
-For more information about the datastructures package, see the README at
-
-	http://github.com/Workiva/go-datastructures
-
-*/
 package datastructures
 
 import (
